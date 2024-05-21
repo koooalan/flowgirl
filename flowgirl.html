@@ -4,8 +4,9 @@
     }
 
     button {
-        background-color: red;
-        width: 120px;
+        margin-top: 5px;
+        background-color: hsla( 341.8,88.4%,43.9% ,1);
+        width: 70px;
         height: 50px;
         border-radius: 5px;    
         border: 0px solid black;
@@ -14,8 +15,8 @@
     }
 
     button:hover {
-        background-color: hsla( 341.8,88.4%,43.9% ,1);
-        width: 120px;
+        cursor: pointer;
+        background-color: hsla( 341.8,88.4%,43.9% ,0.7);
         height: 50px;
         border-radius: 5px;    
         border: 0px solid black;
@@ -25,9 +26,9 @@
     }
 
     input {
-        margin: 20px;
+        margin-top: 5px;
         background-color: pink;
-        width: 240px;
+        width: 218px;
         height: 50px;
         border-radius: 5px;    
         border: 0px solid black;
@@ -35,6 +36,9 @@
         text-align: center;
     }
 
+#apan {
+    width: 218px;
+}
 </style>
 
 <script>
@@ -65,9 +69,9 @@ document.getElementById("cstmAmt").href="https://app.swish.nu/1/p/sw/?sw=1233678
 <A HREF="https://app.swish.nu/1/p/sw/?sw=1233678117&amt=500&cur=SEK&msg=&src=qr" style="text-decoration: none;">
     <button>500</button>
 </a>
+<br>
 
-
-<input placeholder="Valfri summa" id="theAmt" type="text" onkeypress="return onlyNumberKey(event)"  onkeyup="updateAmt();">
+<input placeholder="Valfri summa" id="theAmt" type="text" onkeypress="return onlyNumberKey(event)"  onkeyup="updateAmt();"><br>
 <a id="cstmAmt" href="#"><button id="apan">Swisha</button></a>
 
 
