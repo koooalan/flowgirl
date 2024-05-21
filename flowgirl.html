@@ -1,0 +1,73 @@
+<style>
+    a {
+        text-decoration: none;
+    }
+
+    button {
+        background-color: red;
+        width: 120px;
+        height: 50px;
+        border-radius: 5px;    
+        border: 0px solid black;
+        color: white;
+        font-weight: bold;
+    }
+
+    button:hover {
+        background-color: hsla( 341.8,88.4%,43.9% ,1);
+        width: 120px;
+        height: 50px;
+        border-radius: 5px;    
+        border: 0px solid black;
+        color: white;
+        font-weight: bold;
+
+    }
+
+    input {
+        margin: 20px;
+        background-color: pink;
+        width: 80px;
+        height: 50px;
+        border-radius: 5px;    
+        border: 0px solid black;
+        color: white;
+        text-align: center;
+    }
+
+</style>
+
+<script>
+
+function onlyNumberKey(evt) {
+ 
+ // Only ASCII character in that range allowed
+ let ASCIICode = (evt.which) ? evt.which : evt.keyCode
+ if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57))
+     return false;
+ return true;
+}
+
+function updateAmt() {
+var summan = theAmt.value;
+document.getElementById("cstmAmt").href="https://app.swish.nu/1/p/sw/?sw=1233678117&amt=" + theAmt.value + "&cur=SEK&msg=&src=qr";
+
+}
+</script>
+
+
+<A HREF="https://app.swish.nu/1/p/sw/?sw=1233678117&amt=200&cur=SEK&msg=&src=qr">
+    <button>200</button>
+</a>
+<A HREF="https://app.swish.nu/1/p/sw/?sw=1233678117&amt=300&cur=SEK&msg=&src=qr">
+    <button>300</button>
+</a>
+<A HREF="https://app.swish.nu/1/p/sw/?sw=1233678117&amt=500&cur=SEK&msg=&src=qr" style="text-decoration: none;">
+    <button>500</button>
+</a>
+
+
+<input placeholder="Valfri summa" id="theAmt" type="text" onkeypress="return onlyNumberKey(event)"  onkeyup="updateAmt();">
+<a id="cstmAmt" href="#"><button id="apan">Swisha</button></a>
+
+
